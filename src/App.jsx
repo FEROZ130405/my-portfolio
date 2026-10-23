@@ -1,11 +1,21 @@
-function App() {
-  return (
-    <div className="min-h-screen bg-gray-900 flex items-center justify-center">
-      <h1 className="text-4xl font-bold text-blue-400">
-        Linux Mint Environment Active 🚀
-      </h1>
-    </div>
-  )
-}
+import Navbar from './sections/Navbar.jsx';
+import Hero from './sections/Hero.jsx';
+import Skills from './sections/Skills.jsx';
+import Experience from './sections/Experience.jsx';
+import Projects from './sections/Projects.jsx';
+import Contact from './sections/Contact.jsx';
 
-export default App
+export default function App() {
+  return (
+    <div className="min-h-screen w-full bg-white text-gray-900 flex flex-col font-sans text-left selection:bg-blue-100 selection:text-blue-900">
+      <Navbar />
+      <main className="flex-grow">
+        <Hero />
+        <Skills />
+        <Experience />
+        <Projects />
+      </main>
+      <Contact />
+    </div>
+  );
+}
