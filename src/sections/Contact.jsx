@@ -6,18 +6,22 @@ export default function Contact() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer id="contact" className="bg-white border-t border-gray-200 pt-16 pb-12">
+    <footer id="contact" className="bg-zinc-950 border-t border-red-500/20 shadow-[0_-4px_20px_-2px_rgba(239,68,68,0.12)] pt-20 pb-12 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Contact Section */}
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="text-xs uppercase tracking-widest text-blue-600 font-semibold mb-2">
-            Get In Touch
+          <div className="inline-flex items-center gap-2 mb-3">
+            <span className="w-1.5 h-1.5 bg-red-500" />
+            <span className="font-mono text-xs uppercase tracking-widest text-red-400 font-semibold">
+              // 04. TRANSMISSION / CONTACT
+            </span>
+          </div>
+          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight font-sans">
+            <span className="text-zinc-100">Initialize </span>
+            <span className="text-blue-400 font-mono">Connection</span>
           </h2>
-          <p className="text-3xl sm:text-4xl font-bold text-gray-900 tracking-tight">
-            Let's Connect & Collaborate
-          </p>
-          <p className="text-gray-600 text-sm sm:text-base mt-3 max-w-xl mx-auto">
-            I am always open to discussing new projects, internship and full-time opportunities, or tech in general.
+          <p className="text-zinc-400 text-sm sm:text-base mt-3 max-w-xl mx-auto font-sans">
+            Open for software engineering opportunities, technical collaborations, and full-stack development inquiries.
           </p>
         </div>
 
@@ -26,22 +30,22 @@ export default function Contact() {
           {/* Email Card */}
           <a
             href={`mailto:${contact.email}`}
-            className="group p-6 rounded-2xl bg-gray-50 border border-gray-200 hover:border-blue-400 hover:bg-white hover:shadow-md transition-all duration-300 text-center flex flex-col items-center"
+            className="group p-6 rounded-none bg-zinc-900/40 backdrop-blur-md border border-red-500/25 shadow-[0_0_15px_rgba(239,68,68,0.08)] hover:border-red-500/60 hover:shadow-[0_0_20px_rgba(239,68,68,0.25)] hover:border-l-2 hover:border-l-red-500 hover:border-b-2 hover:border-b-blue-500 transition-all duration-300 transform hover:-translate-y-1 text-center flex flex-col items-center"
           >
-            <div className="w-12 h-12 rounded-xl bg-blue-50 border border-blue-200 text-blue-600 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-              <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <div className="w-12 h-12 rounded-none bg-zinc-950 border border-zinc-800 text-blue-400 flex items-center justify-center mb-4 group-hover:border-blue-500/50 transition-colors">
+              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  strokeWidth="2"
+                  strokeWidth="1.5"
                   d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                 />
               </svg>
             </div>
-            <span className="text-xs uppercase tracking-wider text-gray-500 font-bold">
-              Email
+            <span className="font-mono text-[11px] uppercase tracking-widest text-red-400">
+              COMM // EMAIL
             </span>
-            <span className="text-sm font-semibold text-gray-900 group-hover:text-blue-600 mt-1 break-all">
+            <span className="text-xs sm:text-sm font-mono text-white mt-2 break-all">
               {contact.email}
             </span>
           </a>
@@ -49,22 +53,22 @@ export default function Contact() {
           {/* Phone Card */}
           <a
             href={`tel:${contact.phone.replace(/\s+/g, '')}`}
-            className="group p-6 rounded-2xl bg-gray-50 border border-gray-200 hover:border-blue-400 hover:bg-white hover:shadow-md transition-all duration-300 text-center flex flex-col items-center"
+            className="group p-6 rounded-none bg-zinc-900/40 backdrop-blur-md border border-red-500/25 shadow-[0_0_15px_rgba(239,68,68,0.08)] hover:border-red-500/60 hover:shadow-[0_0_20px_rgba(239,68,68,0.25)] hover:border-l-2 hover:border-l-red-500 hover:border-b-2 hover:border-b-blue-500 transition-all duration-300 transform hover:-translate-y-1 text-center flex flex-col items-center"
           >
-            <div className="w-12 h-12 rounded-xl bg-blue-50 border border-blue-200 text-blue-600 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-              <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <div className="w-12 h-12 rounded-none bg-zinc-950 border border-zinc-800 text-blue-400 flex items-center justify-center mb-4 group-hover:border-blue-500/50 transition-colors">
+              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  strokeWidth="2"
+                  strokeWidth="1.5"
                   d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                 />
               </svg>
             </div>
-            <span className="text-xs uppercase tracking-wider text-gray-500 font-bold">
-              Phone
+            <span className="font-mono text-[11px] uppercase tracking-widest text-red-400">
+              VOICE // DIRECT
             </span>
-            <span className="text-sm font-semibold text-gray-900 group-hover:text-blue-600 mt-1">
+            <span className="text-xs sm:text-sm font-mono text-white mt-2">
               {contact.phone}
             </span>
           </a>
@@ -74,10 +78,10 @@ export default function Contact() {
             href={contact.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="group p-6 rounded-2xl bg-gray-50 border border-gray-200 hover:border-blue-400 hover:bg-white hover:shadow-md transition-all duration-300 text-center flex flex-col items-center"
+            className="group p-6 rounded-none bg-zinc-900/40 backdrop-blur-md border border-red-500/25 shadow-[0_0_15px_rgba(239,68,68,0.08)] hover:border-red-500/60 hover:shadow-[0_0_20px_rgba(239,68,68,0.25)] hover:border-l-2 hover:border-l-red-500 hover:border-b-2 hover:border-b-blue-500 transition-all duration-300 transform hover:-translate-y-1 text-center flex flex-col items-center"
           >
-            <div className="w-12 h-12 rounded-xl bg-blue-50 border border-blue-200 text-blue-600 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-              <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24">
+            <div className="w-12 h-12 rounded-none bg-zinc-950 border border-zinc-800 text-blue-400 flex items-center justify-center mb-4 group-hover:border-blue-500/50 transition-colors">
+              <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
                 <path
                   fillRule="evenodd"
                   clipRule="evenodd"
@@ -85,45 +89,45 @@ export default function Contact() {
                 />
               </svg>
             </div>
-            <span className="text-xs uppercase tracking-wider text-gray-500 font-bold">
-              GitHub Profile
+            <span className="font-mono text-[11px] uppercase tracking-widest text-red-400">
+              CODE // REPO
             </span>
-            <span className="text-sm font-semibold text-gray-900 group-hover:text-blue-600 mt-1">
+            <span className="text-xs sm:text-sm font-mono text-white mt-2 transition-colors">
               github.com/FEROZ130405
             </span>
           </a>
         </div>
 
         {/* Location pill */}
-        <div className="flex justify-center mb-12">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gray-50 border border-gray-200 text-xs font-medium text-gray-700 shadow-xs">
-            <svg className="w-4 h-4 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+        <div className="flex justify-center mb-14">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-none bg-zinc-900/40 backdrop-blur-md border border-zinc-800 text-xs font-mono text-zinc-400 hover:border-blue-500/50 hover:text-blue-300 transition-colors">
+            <svg className="w-3.5 h-3.5 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
             </svg>
-            <span>{contact.location}</span>
+            <span>BASE_STATION // <span className="text-blue-400">{contact.location}</span></span>
           </div>
         </div>
 
         {/* Footer Bottom Bar */}
-        <div className="pt-8 border-t border-gray-200 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-500">
-          <p>© {currentYear} {name}. All rights reserved.</p>
+        <div className="pt-8 border-t border-red-500/15 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-zinc-500">
+          <p>© {currentYear} {name} // ALL RIGHTS RESERVED.</p>
 
           <div className="flex items-center gap-6">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
-                className="hover:text-gray-900 transition-colors font-medium"
+                className="hover:text-blue-400 transition-colors"
               >
                 {link.name}
               </a>
             ))}
             <a
               href="#hero"
-              className="text-blue-600 hover:text-blue-800 transition-colors flex items-center gap-1 font-semibold"
+              className="text-red-400 hover:text-red-300 transition-colors flex items-center gap-1 font-semibold"
             >
-              <span>Back to top</span>
+              <span>TOP_OF_STACK</span>
               <span>↑</span>
             </a>
           </div>

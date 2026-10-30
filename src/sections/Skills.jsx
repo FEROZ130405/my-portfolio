@@ -23,18 +23,22 @@ export default function Skills() {
   };
 
   return (
-    <section id="skills" className="py-16 md:py-24 bg-gray-50/80 border-t border-gray-200">
+    <section id="skills" className="py-20 md:py-28 bg-zinc-950/90 border-t border-red-500/20 shadow-[0_-4px_20px_-2px_rgba(239,68,68,0.12)] relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-12">
-          <h2 className="text-xs uppercase tracking-widest text-blue-600 font-semibold mb-2">
-            Technical Expertise
+        <div className="text-center max-w-2xl mx-auto mb-14">
+          <div className="inline-flex items-center gap-2 mb-3">
+            <span className="w-1.5 h-1.5 bg-red-500" />
+            <span className="font-mono text-xs uppercase tracking-widest text-red-400 font-semibold">
+              // 01. TECHNICAL MATRIX
+            </span>
+          </div>
+          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight font-sans">
+            <span className="text-zinc-100">Skills & </span>
+            <span className="text-blue-400 font-mono">Technologies</span>
           </h2>
-          <p className="text-3xl sm:text-4xl font-bold text-gray-900 tracking-tight">
-            Skills & Technologies
-          </p>
-          <p className="text-gray-600 text-sm sm:text-base mt-3">
-            Core programming languages, libraries, frameworks, and developer tools in my stack.
+          <p className="text-zinc-400 text-sm sm:text-base mt-3 font-sans">
+            Compiled competencies across modern full-stack web architectures, programming languages, and runtime engines.
           </p>
 
           {/* Filter Tabs */}
@@ -44,10 +48,10 @@ export default function Skills() {
                 key={cat}
                 type="button"
                 onClick={() => setActiveCategory(cat)}
-                className={`px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-semibold transition-all ${
+                className={`px-3.5 py-1.5 rounded-none font-mono text-xs uppercase tracking-wider transition-all ${
                   activeCategory === cat
-                    ? 'bg-blue-600 text-white shadow-sm'
-                    : 'bg-white text-gray-700 hover:text-gray-900 hover:bg-gray-100 border border-gray-300'
+                    ? 'bg-red-500/10 border border-red-500 text-red-400 shadow-[0_0_12px_rgba(239,68,68,0.25)]'
+                    : 'bg-zinc-900/50 border border-zinc-800 text-zinc-400 hover:text-blue-400 hover:border-zinc-700'
                 }`}
               >
                 {cat}
@@ -61,20 +65,20 @@ export default function Skills() {
           {filteredSkills.map((skill) => (
             <div
               key={skill}
-              className="group p-4 rounded-xl bg-white hover:bg-blue-50/40 border border-gray-200 hover:border-blue-300 shadow-xs hover:shadow-md transition-all duration-300 transform hover:-translate-y-1 flex flex-col justify-between"
+              className="group p-4 rounded-none bg-zinc-900/40 backdrop-blur-md border border-zinc-800 hover:border-blue-500/70 hover:border-l-2 hover:border-l-red-500 hover:border-b-2 hover:border-b-blue-500 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-[0_0_15px_rgba(59,130,246,0.25)] flex flex-col justify-between"
             >
-              <div className="flex items-center justify-between mb-2">
-                <span className="w-2.5 h-2.5 rounded-full bg-blue-600 group-hover:scale-125 transition-transform" />
-                <span className="text-[10px] uppercase font-mono tracking-wider text-gray-500 group-hover:text-blue-600 transition-colors">
+              <div className="flex items-center justify-between mb-3">
+                <span className="w-1.5 h-1.5 bg-blue-400 group-hover:scale-125 transition-transform" />
+                <span className="font-mono text-[10px] uppercase tracking-wider text-red-400 group-hover:text-red-300 transition-colors">
                   {getSkillCategory(skill).split(' ')[0]}
                 </span>
               </div>
               <div>
-                <p className="text-base font-bold text-gray-900 group-hover:text-blue-700 transition-colors">
+                <p className="text-base font-semibold text-zinc-100 group-hover:text-blue-300 transition-colors font-sans">
                   {skill}
                 </p>
-                <p className="text-xs text-gray-500 mt-0.5">
-                  {getSkillCategory(skill)}
+                <p className="font-mono text-[11px] text-zinc-500 mt-0.5">
+                  &gt; {getSkillCategory(skill)}
                 </p>
               </div>
             </div>
@@ -82,21 +86,21 @@ export default function Skills() {
         </div>
 
         {/* Categorized Summary Blocks */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12 pt-8 border-t border-gray-200">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-14 pt-8 border-t border-red-500/20 shadow-[0_-2px_15px_rgba(239,68,68,0.08)]">
           {skillsCategorized.map((group) => (
             <div
               key={group.category}
-              className="p-5 rounded-xl bg-white border border-gray-200 shadow-xs"
+              className="p-5 rounded-none bg-zinc-900/40 backdrop-blur-md border border-red-500/20 shadow-[0_0_12px_rgba(239,68,68,0.06)] hover:border-red-500/40 transition-colors"
             >
-              <h3 className="text-sm font-bold text-blue-700 mb-3 flex items-center gap-2">
-                <span className="w-1.5 h-4 bg-blue-600 rounded-sm" />
-                {group.category}
+              <h3 className="font-mono text-xs uppercase tracking-wider text-blue-400 mb-3 flex items-center gap-2">
+                <span className="text-red-500">#</span>
+                <span>{group.category}</span>
               </h3>
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-1.5">
                 {group.items.map((item) => (
                   <span
                     key={item}
-                    className="px-2.5 py-1 text-xs font-medium rounded-md bg-gray-100 text-gray-800 border border-gray-200"
+                    className="px-2.5 py-1 text-xs font-mono rounded-none bg-zinc-950 border border-zinc-800/90 text-zinc-300 hover:border-red-500/40 hover:text-red-400 transition-colors"
                   >
                     {item}
                   </span>
