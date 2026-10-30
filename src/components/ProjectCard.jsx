@@ -1,10 +1,10 @@
 export default function ProjectCard({ project, index }) {
   return (
-    <div className="group flex flex-col justify-between rounded-none bg-zinc-900/40 backdrop-blur-md border border-red-500/25 shadow-[0_0_15px_rgba(239,68,68,0.08)] hover:border-red-500/60 hover:shadow-[0_0_20px_rgba(239,68,68,0.25)] hover:border-l-2 hover:border-l-red-500 hover:border-b-2 hover:border-b-blue-500 transition-all duration-300 transform hover:-translate-y-1 overflow-hidden">
+    <div className="group flex flex-col justify-between rounded-none bg-[#11141c]/45 backdrop-blur-md border border-blue-500/25 shadow-[0_0_15px_rgba(59,130,246,0.08)] hover:border-blue-500/60 hover:shadow-[0_0_20px_rgba(59,130,246,0.25)] hover:border-l-2 hover:border-l-blue-500 hover:border-b-2 hover:border-b-red-500 transition-all duration-300 transform hover:-translate-y-1 overflow-hidden">
       <div className="p-6">
         {/* Top card header with cyber icon & index */}
         <div className="flex items-center justify-between mb-4">
-          <div className="w-10 h-10 rounded-none bg-zinc-950 border border-zinc-800 flex items-center justify-center text-blue-400 group-hover:border-blue-500/50 transition-colors">
+          <div className="w-10 h-10 rounded-none bg-zinc-950 border border-zinc-800 flex items-center justify-center text-red-400 group-hover:border-red-500/50 transition-colors">
             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path
                 strokeLinecap="round"
@@ -14,13 +14,13 @@ export default function ProjectCard({ project, index }) {
               />
             </svg>
           </div>
-          <span className="font-mono text-xs tracking-widest text-red-400 group-hover:text-red-300 transition-colors">
+          <span className="font-mono text-xs tracking-widest text-blue-400 group-hover:text-blue-300 transition-colors">
             // 0{index + 1}
           </span>
         </div>
 
         {/* Project Title */}
-        <h3 className="text-xl font-bold text-zinc-100 group-hover:text-blue-400 transition-colors font-sans">
+        <h3 className="text-xl font-bold text-zinc-100 group-hover:text-red-400 transition-colors font-sans">
           {project.title}
         </h3>
 
@@ -32,13 +32,13 @@ export default function ProjectCard({ project, index }) {
         {/* Key Features Bullet points */}
         {project.features && (
           <div className="mt-5 pt-4 border-t border-zinc-800/80 space-y-2">
-            <p className="text-[11px] font-mono uppercase tracking-widest text-blue-400">
+            <p className="text-[11px] font-mono uppercase tracking-widest text-red-400">
               SYS.HIGHLIGHTS
             </p>
             <ul className="space-y-1.5 text-xs text-zinc-300 font-sans">
               {project.features.map((feature, fIdx) => (
                 <li key={fIdx} className="flex items-start gap-2">
-                  <span className="text-red-500 font-mono text-xs">▸</span>
+                  <span className="text-blue-500 font-mono text-xs">▸</span>
                   <span>{feature}</span>
                 </li>
               ))}
@@ -54,7 +54,7 @@ export default function ProjectCard({ project, index }) {
           {project.tags.map((tag) => (
             <span
               key={tag}
-              className="px-2 py-0.5 rounded-none text-xs font-mono bg-zinc-950 border border-zinc-800/90 text-blue-300 group-hover:border-blue-500/30 transition-colors"
+              className="px-2 py-0.5 rounded-none text-xs font-mono bg-zinc-950 border border-zinc-800/90 text-red-300 group-hover:border-red-500/30 transition-colors"
             >
               {tag}
             </span>
@@ -66,7 +66,7 @@ export default function ProjectCard({ project, index }) {
           href={project.githubUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="w-full inline-flex items-center justify-center gap-2 py-2.5 px-4 rounded-none text-xs font-mono tracking-wider uppercase font-semibold bg-zinc-900/80 hover:bg-blue-600 text-zinc-200 hover:text-white border border-zinc-800 hover:border-blue-500 transition-all duration-200 hover:shadow-[0_0_15px_rgba(59,130,246,0.3)]"
+          className="w-full inline-flex items-center justify-center gap-2 py-2.5 px-4 rounded-none text-xs font-mono tracking-wider uppercase font-semibold bg-[#11141c]/80 hover:bg-red-600 text-zinc-200 hover:text-white border border-zinc-800 hover:border-red-500 transition-all duration-200 hover:shadow-[0_0_15px_rgba(239,68,68,0.3)]"
         >
           <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
             <path

@@ -9,31 +9,31 @@ export default function Navbar() {
   const closeMenu = () => setIsOpen(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-zinc-900/60 backdrop-blur-md border-b border-red-500/20 shadow-[0_4px_20px_-2px_rgba(239,68,68,0.15)]">
+    <header className="sticky top-0 z-50 w-full bg-[#11141c]/70 backdrop-blur-md border-b border-blue-500/20 shadow-[0_4px_20px_-2px_rgba(59,130,246,0.15)]">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         {/* Brand / Logo with Profile Picture */}
         <a
           href="#hero"
-          className="group flex items-center gap-3 text-base sm:text-lg font-bold tracking-tight text-zinc-100 hover:text-blue-400 transition-colors"
+          className="group flex items-center gap-3 text-base sm:text-lg font-bold tracking-tight text-zinc-100 hover:text-red-400 transition-colors"
           onClick={closeMenu}
         >
           {profileImage ? (
-            <div className="relative p-0.5 rounded-none border border-zinc-800 bg-zinc-950 group-hover:border-blue-500/60 transition-colors">
+            <div className="relative p-0.5 rounded-none border border-zinc-800 bg-zinc-950 group-hover:border-red-500/60 transition-colors">
               <img
                 src={profileImage}
                 alt={name}
                 className="w-8 h-8 rounded-none object-cover"
               />
-              <span className="absolute -bottom-0.5 -right-0.5 w-1.5 h-1.5 bg-blue-500" />
+              <span className="absolute -bottom-0.5 -right-0.5 w-1.5 h-1.5 bg-red-500" />
             </div>
           ) : (
-            <span className="w-8 h-8 rounded-none bg-zinc-950 border border-zinc-800 flex items-center justify-center text-blue-400 font-mono text-xs font-bold">
+            <span className="w-8 h-8 rounded-none bg-zinc-950 border border-zinc-800 flex items-center justify-center text-red-400 font-mono text-xs font-bold">
               MF
             </span>
           )}
           <span className="font-mono tracking-tight font-semibold">
             {name}
-            <span className="text-red-500 animate-pulse ml-0.5">_</span>
+            <span className="text-blue-500 animate-pulse ml-0.5">_</span>
           </span>
         </a>
 
@@ -43,9 +43,9 @@ export default function Navbar() {
             <a
               key={link.name}
               href={link.href}
-              className="font-mono text-xs uppercase tracking-wider text-zinc-400 hover:text-blue-400 transition-colors py-1 flex items-center gap-1.5 group"
+              className="font-mono text-xs uppercase tracking-wider text-zinc-400 hover:text-red-400 transition-colors py-1 flex items-center gap-1.5 group"
             >
-              <span className="text-red-500 group-hover:text-red-400 transition-colors text-[10px]">
+              <span className="text-blue-500 group-hover:text-blue-400 transition-colors text-[10px]">
                 0{idx + 1}.
               </span>
               <span>{link.name}</span>
@@ -55,7 +55,7 @@ export default function Navbar() {
             href={contact.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-none font-mono text-xs uppercase tracking-wider font-semibold bg-zinc-900/60 text-zinc-200 hover:text-blue-300 hover:border-blue-500 hover:shadow-[0_0_15px_rgba(59,130,246,0.3)] border border-zinc-800 transition-all duration-200"
+            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-none font-mono text-xs uppercase tracking-wider font-semibold bg-[#11141c]/60 text-zinc-200 hover:text-red-300 hover:border-red-500 hover:shadow-[0_0_15px_rgba(239,68,68,0.3)] border border-zinc-800 transition-all duration-200"
           >
             <svg
               className="w-3.5 h-3.5 fill-current"
@@ -78,7 +78,7 @@ export default function Navbar() {
             type="button"
             onClick={toggleMenu}
             aria-label="Toggle Navigation Menu"
-            className="p-2 rounded-none text-zinc-400 hover:text-blue-400 hover:bg-zinc-900 border border-transparent hover:border-zinc-800 transition-colors"
+            className="p-2 rounded-none text-zinc-400 hover:text-red-400 hover:bg-[#11141c] border border-transparent hover:border-zinc-800 transition-colors"
           >
             {isOpen ? (
               <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -95,15 +95,15 @@ export default function Navbar() {
 
       {/* Mobile Menu Dropdown */}
       {isOpen && (
-        <div className="md:hidden border-t border-red-500/20 bg-zinc-950/95 backdrop-blur-md px-4 pt-3 pb-5 space-y-2 shadow-[0_4px_20px_-2px_rgba(239,68,68,0.15)]">
+        <div className="md:hidden border-t border-blue-500/20 bg-[#0e1118]/95 backdrop-blur-md px-4 pt-3 pb-5 space-y-2 shadow-[0_4px_20px_-2px_rgba(59,130,246,0.15)]">
           {navLinks.map((link, idx) => (
             <a
               key={link.name}
               href={link.href}
               onClick={closeMenu}
-              className="flex items-center gap-2 px-3 py-2 rounded-none font-mono text-xs uppercase tracking-wider text-zinc-300 hover:text-blue-400 hover:bg-zinc-900/60 transition-colors"
+              className="flex items-center gap-2 px-3 py-2 rounded-none font-mono text-xs uppercase tracking-wider text-zinc-300 hover:text-red-400 hover:bg-[#11141c]/60 transition-colors"
             >
-              <span className="text-red-500 text-[10px]">0{idx + 1}.</span>
+              <span className="text-blue-500 text-[10px]">0{idx + 1}.</span>
               <span>{link.name}</span>
             </a>
           ))}
@@ -113,7 +113,7 @@ export default function Navbar() {
               target="_blank"
               rel="noopener noreferrer"
               onClick={closeMenu}
-              className="flex items-center justify-center gap-2 w-full py-2.5 px-4 rounded-none font-mono text-xs uppercase tracking-wider font-semibold bg-blue-600 hover:bg-blue-500 text-white transition-colors shadow-[0_0_15px_rgba(59,130,246,0.3)]"
+              className="flex items-center justify-center gap-2 w-full py-2.5 px-4 rounded-none font-mono text-xs uppercase tracking-wider font-semibold bg-red-600 hover:bg-red-500 text-white transition-colors shadow-[0_0_15px_rgba(239,68,68,0.3)]"
             >
               <span>ACCESS GITHUB PROFILE</span>
             </a>

@@ -7,7 +7,7 @@ import Contact from './sections/Contact.jsx';
 
 export default function App() {
   return (
-    <div className="min-h-screen w-full bg-zinc-950 text-zinc-100 flex flex-col font-sans text-left selection:bg-red-500/30 selection:text-red-200">
+    <div className="min-h-screen w-full bg-zinc-950 text-zinc-100 flex flex-col font-sans text-left selection:bg-blue-500/30 selection:text-blue-200">
       <Navbar />
       <main className="flex-grow">
         <Hero />

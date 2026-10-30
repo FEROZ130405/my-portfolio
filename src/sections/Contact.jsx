@@ -6,19 +6,19 @@ export default function Contact() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer id="contact" className="bg-zinc-950 border-t border-red-500/20 shadow-[0_-4px_20px_-2px_rgba(239,68,68,0.12)] pt-20 pb-12 relative">
+    <footer id="contact" className="bg-zinc-950 border-t border-blue-500/20 shadow-[0_-4px_20px_-2px_rgba(59,130,246,0.12)] pt-20 pb-12 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Contact Section */}
         <div className="max-w-3xl mx-auto text-center mb-16">
           <div className="inline-flex items-center gap-2 mb-3">
-            <span className="w-1.5 h-1.5 bg-red-500" />
-            <span className="font-mono text-xs uppercase tracking-widest text-red-400 font-semibold">
+            <span className="w-1.5 h-1.5 bg-blue-500" />
+            <span className="font-mono text-xs uppercase tracking-widest text-blue-400 font-semibold">
               // 04. TRANSMISSION / CONTACT
             </span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-bold tracking-tight font-sans">
             <span className="text-zinc-100">Initialize </span>
-            <span className="text-blue-400 font-mono">Connection</span>
+            <span className="text-red-500 font-mono">Connection</span>
           </h2>
           <p className="text-zinc-400 text-sm sm:text-base mt-3 max-w-xl mx-auto font-sans">
             Open for software engineering opportunities, technical collaborations, and full-stack development inquiries.
@@ -30,9 +30,9 @@ export default function Contact() {
           {/* Email Card */}
           <a
             href={`mailto:${contact.email}`}
-            className="group p-6 rounded-none bg-zinc-900/40 backdrop-blur-md border border-red-500/25 shadow-[0_0_15px_rgba(239,68,68,0.08)] hover:border-red-500/60 hover:shadow-[0_0_20px_rgba(239,68,68,0.25)] hover:border-l-2 hover:border-l-red-500 hover:border-b-2 hover:border-b-blue-500 transition-all duration-300 transform hover:-translate-y-1 text-center flex flex-col items-center"
+            className="group p-6 rounded-none bg-[#11141c]/45 backdrop-blur-md border border-blue-500/25 shadow-[0_0_15px_rgba(59,130,246,0.08)] hover:border-blue-500/60 hover:shadow-[0_0_20px_rgba(59,130,246,0.25)] hover:border-l-2 hover:border-l-blue-500 hover:border-b-2 hover:border-b-red-500 transition-all duration-300 transform hover:-translate-y-1 text-center flex flex-col items-center"
           >
-            <div className="w-12 h-12 rounded-none bg-zinc-950 border border-zinc-800 text-blue-400 flex items-center justify-center mb-4 group-hover:border-blue-500/50 transition-colors">
+            <div className="w-12 h-12 rounded-none bg-zinc-950 border border-zinc-800 text-red-400 flex items-center justify-center mb-4 group-hover:border-red-500/50 transition-colors">
               <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path
                   strokeLinecap="round"
@@ -42,7 +42,7 @@ export default function Contact() {
                 />
               </svg>
             </div>
-            <span className="font-mono text-[11px] uppercase tracking-widest text-red-400">
+            <span className="font-mono text-[11px] uppercase tracking-widest text-blue-400">
               COMM // EMAIL
             </span>
             <span className="text-xs sm:text-sm font-mono text-white mt-2 break-all">
@@ -53,9 +53,9 @@ export default function Contact() {
           {/* Phone Card */}
           <a
             href={`tel:${contact.phone.replace(/\s+/g, '')}`}
-            className="group p-6 rounded-none bg-zinc-900/40 backdrop-blur-md border border-red-500/25 shadow-[0_0_15px_rgba(239,68,68,0.08)] hover:border-red-500/60 hover:shadow-[0_0_20px_rgba(239,68,68,0.25)] hover:border-l-2 hover:border-l-red-500 hover:border-b-2 hover:border-b-blue-500 transition-all duration-300 transform hover:-translate-y-1 text-center flex flex-col items-center"
+            className="group p-6 rounded-none bg-[#11141c]/45 backdrop-blur-md border border-blue-500/25 shadow-[0_0_15px_rgba(59,130,246,0.08)] hover:border-blue-500/60 hover:shadow-[0_0_20px_rgba(59,130,246,0.25)] hover:border-l-2 hover:border-l-red-500 hover:border-b-2 hover:border-b-blue-500 transition-all duration-300 transform hover:-translate-y-1 text-center flex flex-col items-center"
           >
-            <div className="w-12 h-12 rounded-none bg-zinc-950 border border-zinc-800 text-blue-400 flex items-center justify-center mb-4 group-hover:border-blue-500/50 transition-colors">
+            <div className="w-12 h-12 rounded-none bg-zinc-950 border border-zinc-800 text-red-400 flex items-center justify-center mb-4 group-hover:border-red-500/50 transition-colors">
               <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path
                   strokeLinecap="round"
@@ -65,7 +65,7 @@ export default function Contact() {
                 />
               </svg>
             </div>
-            <span className="font-mono text-[11px] uppercase tracking-widest text-red-400">
+            <span className="font-mono text-[11px] uppercase tracking-widest text-blue-400">
               VOICE // DIRECT
             </span>
             <span className="text-xs sm:text-sm font-mono text-white mt-2">
@@ -78,9 +78,9 @@ export default function Contact() {
             href={contact.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="group p-6 rounded-none bg-zinc-900/40 backdrop-blur-md border border-red-500/25 shadow-[0_0_15px_rgba(239,68,68,0.08)] hover:border-red-500/60 hover:shadow-[0_0_20px_rgba(239,68,68,0.25)] hover:border-l-2 hover:border-l-red-500 hover:border-b-2 hover:border-b-blue-500 transition-all duration-300 transform hover:-translate-y-1 text-center flex flex-col items-center"
+            className="group p-6 rounded-none bg-[#11141c]/45 backdrop-blur-md border border-blue-500/25 shadow-[0_0_15px_rgba(59,130,246,0.08)] hover:border-blue-500/60 hover:shadow-[0_0_20px_rgba(59,130,246,0.25)] hover:border-l-2 hover:border-l-blue-500 hover:border-b-2 hover:border-b-red-500 transition-all duration-300 transform hover:-translate-y-1 text-center flex flex-col items-center"
           >
-            <div className="w-12 h-12 rounded-none bg-zinc-950 border border-zinc-800 text-blue-400 flex items-center justify-center mb-4 group-hover:border-blue-500/50 transition-colors">
+            <div className="w-12 h-12 rounded-none bg-zinc-950 border border-zinc-800 text-red-400 flex items-center justify-center mb-4 group-hover:border-red-500/50 transition-colors">
               <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
                 <path
                   fillRule="evenodd"
@@ -89,7 +89,7 @@ export default function Contact() {
                 />
               </svg>
             </div>
-            <span className="font-mono text-[11px] uppercase tracking-widest text-red-400">
+            <span className="font-mono text-[11px] uppercase tracking-widest text-blue-400">
               CODE // REPO
             </span>
             <span className="text-xs sm:text-sm font-mono text-white mt-2 transition-colors">
@@ -100,17 +100,17 @@ export default function Contact() {
 
         {/* Location pill */}
         <div className="flex justify-center mb-14">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-none bg-zinc-900/40 backdrop-blur-md border border-zinc-800 text-xs font-mono text-zinc-400 hover:border-blue-500/50 hover:text-blue-300 transition-colors">
-            <svg className="w-3.5 h-3.5 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-none bg-[#11141c]/40 backdrop-blur-md border border-zinc-800 text-xs font-mono text-zinc-400 hover:border-red-500/50 hover:text-red-300 transition-colors">
+            <svg className="w-3.5 h-3.5 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
             </svg>
-            <span>BASE_STATION // <span className="text-blue-400">{contact.location}</span></span>
+            <span>BASE_STATION // <span className="text-red-400">{contact.location}</span></span>
           </div>
         </div>
 
         {/* Footer Bottom Bar */}
-        <div className="pt-8 border-t border-red-500/15 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-zinc-500">
+        <div className="pt-8 border-t border-blue-500/15 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-zinc-500">
           <p>© {currentYear} {name} // ALL RIGHTS RESERVED.</p>
 
           <div className="flex items-center gap-6">
@@ -118,14 +118,14 @@ export default function Contact() {
               <a
                 key={link.name}
                 href={link.href}
-                className="hover:text-blue-400 transition-colors"
+                className="hover:text-red-400 transition-colors"
               >
                 {link.name}
               </a>
             ))}
             <a
               href="#hero"
-              className="text-red-400 hover:text-red-300 transition-colors flex items-center gap-1 font-semibold"
+              className="text-blue-400 hover:text-blue-300 transition-colors flex items-center gap-1 font-semibold"
             >
               <span>TOP_OF_STACK</span>
               <span>↑</span>

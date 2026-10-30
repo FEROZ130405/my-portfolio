@@ -5,28 +5,28 @@ export default function Hero() {
 
   return (
     <section id="hero" className="relative pt-14 pb-20 md:pt-24 md:pb-28 overflow-hidden bg-zinc-950">
-      {/* Subtle ambient blue/red glow backdrop */}
+      {/* Subtle ambient red/blue glow backdrop */}
       <div
-        className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-blue-600/5 blur-[130px] pointer-events-none -z-10"
+        className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-red-600/5 blur-[130px] pointer-events-none -z-10"
         aria-hidden="true"
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center">
-          {/* Profile Picture with Futuristic Angular Frame */}
+          {/* Profile Picture with Seamless Dark Background and Blue Corner Accents */}
           {profileImage && (
             <div className="relative inline-block mb-8 group">
-              <div className="relative p-1.5 rounded-none bg-zinc-900/60 backdrop-blur-md border border-zinc-800 group-hover:border-blue-500/80 transition-all duration-300 shadow-[0_0_20px_rgba(59,130,246,0.15)] group-hover:shadow-[0_0_25px_rgba(59,130,246,0.3)]">
-                {/* Cyber Corner Brackets in Red on all 4 corners */}
-                <span className="absolute -top-1 -left-1 w-2.5 h-2.5 border-t-2 border-l-2 border-red-500" />
-                <span className="absolute -top-1 -right-1 w-2.5 h-2.5 border-t-2 border-r-2 border-red-500" />
-                <span className="absolute -bottom-1 -left-1 w-2.5 h-2.5 border-b-2 border-l-2 border-red-500" />
-                <span className="absolute -bottom-1 -right-1 w-2.5 h-2.5 border-b-2 border-r-2 border-red-500" />
+              <div className="relative p-1.5 rounded-none bg-zinc-950 border border-zinc-800 group-hover:border-blue-500/80 transition-all duration-300 shadow-[0_0_20px_rgba(59,130,246,0.15)] group-hover:shadow-[0_0_25px_rgba(59,130,246,0.3)]">
+                {/* Cyber Corner Brackets in Blue on all 4 corners */}
+                <span className="absolute -top-1 -left-1 w-2.5 h-2.5 border-t-2 border-l-2 border-blue-500" />
+                <span className="absolute -top-1 -right-1 w-2.5 h-2.5 border-t-2 border-r-2 border-blue-500" />
+                <span className="absolute -bottom-1 -left-1 w-2.5 h-2.5 border-b-2 border-l-2 border-blue-500" />
+                <span className="absolute -bottom-1 -right-1 w-2.5 h-2.5 border-b-2 border-r-2 border-blue-500" />
                 
                 <img
                   src={profileImage}
                   alt={name}
-                  className="w-36 h-36 sm:w-44 sm:h-44 rounded-none object-cover grayscale-[15%] group-hover:grayscale-0 transition-all duration-300"
+                  className="w-36 h-36 sm:w-44 sm:h-44 rounded-none object-cover transition-all duration-300"
                 />
               </div>
             </div>
@@ -34,31 +34,31 @@ export default function Hero() {
 
           {/* Terminal-style Status Badge */}
           <div className="mb-6">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-none bg-zinc-900/60 border border-zinc-800 font-mono text-xs uppercase tracking-wider text-blue-400 shadow-xs">
-              <span className="w-1.5 h-1.5 bg-red-500 animate-pulse" />
-              <span>SYS.STATUS // <span className="text-red-400">OPEN FOR SOFTWARE ROLES</span></span>
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-none bg-[#11141c]/60 border border-blue-500/20 font-mono text-xs uppercase tracking-wider text-red-400 shadow-xs">
+              <span className="w-1.5 h-1.5 bg-blue-500 animate-pulse" />
+              <span>SYS.STATUS // <span className="text-blue-400">OPEN FOR SOFTWARE ROLES</span></span>
             </div>
           </div>
 
-          {/* Heading: "Hi, I'm" in red, Name in blue gradient */}
+          {/* Heading: "Hi, I'm" in blue, Name in red gradient */}
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight mb-4 font-sans">
             <span
-              className="text-red-500 font-sans"
-              style={{ color: '#ef4444' }}
+              className="text-blue-500 font-sans"
+              style={{ color: '#3b82f6' }}
             >
               Hi, I'm{' '}
             </span>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-sky-300 to-indigo-400 font-mono">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-rose-400 to-red-400 font-mono">
               {name}
             </span>
           </h1>
 
           {/* Subtitle / Role */}
           <div className="flex items-center justify-center gap-2 mb-6">
-            <span className="text-red-500 font-mono text-sm">&gt;</span>
-            <p className="font-mono text-lg sm:text-xl text-blue-400 tracking-wide font-medium">
+            <span className="text-blue-500 font-mono text-sm">&gt;</span>
+            <p className="font-mono text-lg sm:text-xl text-red-400 tracking-wide font-medium">
               {title}
-              <span className="text-red-500 animate-pulse ml-0.5">_</span>
+              <span className="text-blue-500 animate-pulse ml-0.5">_</span>
             </p>
           </div>
 
@@ -71,13 +71,13 @@ export default function Hero() {
           <div className="flex flex-wrap items-center justify-center gap-4">
             <a
               href="#projects"
-              className="px-6 py-3 rounded-none bg-blue-600 hover:bg-blue-500 text-white font-mono text-xs uppercase tracking-wider font-bold shadow-[0_0_15px_rgba(59,130,246,0.35)] hover:shadow-[0_0_20px_rgba(59,130,246,0.5)] transition-all duration-200 transform hover:-translate-y-0.5"
+              className="px-6 py-3 rounded-none bg-red-600 hover:bg-red-500 text-white font-mono text-xs uppercase tracking-wider font-bold shadow-[0_0_15px_rgba(239,68,68,0.35)] hover:shadow-[0_0_20px_rgba(239,68,68,0.5)] transition-all duration-200 transform hover:-translate-y-0.5"
             >
               View Projects
             </a>
             <a
               href="#contact"
-              className="px-6 py-3 rounded-none bg-zinc-900/60 hover:bg-zinc-800 text-zinc-200 font-mono text-xs uppercase tracking-wider font-semibold border border-zinc-800 hover:border-red-500 hover:text-red-400 hover:shadow-[0_0_15px_rgba(239,68,68,0.25)] transition-all duration-200 transform hover:-translate-y-0.5"
+              className="px-6 py-3 rounded-none bg-[#11141c]/60 hover:bg-[#161c28] text-zinc-200 font-mono text-xs uppercase tracking-wider font-semibold border border-zinc-800 hover:border-blue-500 hover:text-blue-400 hover:shadow-[0_0_15px_rgba(59,130,246,0.25)] transition-all duration-200 transform hover:-translate-y-0.5"
             >
               Initialize Contact
             </a>
@@ -85,7 +85,7 @@ export default function Hero() {
               href={contact.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-4 py-3 rounded-none bg-zinc-900/60 hover:bg-zinc-800 text-zinc-300 hover:text-blue-400 font-mono text-xs uppercase tracking-wider border border-zinc-800 hover:border-blue-500 hover:shadow-[0_0_15px_rgba(59,130,246,0.25)] transition-all duration-200 inline-flex items-center gap-2"
+              className="px-4 py-3 rounded-none bg-[#11141c]/60 hover:bg-[#161c28] text-zinc-300 hover:text-red-400 font-mono text-xs uppercase tracking-wider border border-zinc-800 hover:border-red-500 hover:shadow-[0_0_15px_rgba(239,68,68,0.25)] transition-all duration-200 inline-flex items-center gap-2"
               aria-label="GitHub Profile"
             >
               <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
@@ -100,27 +100,27 @@ export default function Hero() {
           </div>
 
           {/* Quick stats / metadata big cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-16 pt-8 border-t border-red-500/20 text-left">
-            <div className="p-4 rounded-none bg-zinc-900/40 backdrop-blur-md border border-red-500/25 shadow-[0_0_15px_rgba(239,68,68,0.08)] hover:border-red-500/50 hover:shadow-[0_0_20px_rgba(239,68,68,0.2)] hover:border-l-2 hover:border-l-red-500 transition-all">
-              <span className="font-mono text-[11px] uppercase tracking-widest text-red-400">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-16 pt-8 border-t border-blue-500/20 text-left">
+            <div className="p-4 rounded-none bg-[#11141c]/45 backdrop-blur-md border border-blue-500/25 shadow-[0_0_15px_rgba(59,130,246,0.08)] hover:border-blue-500/50 hover:shadow-[0_0_20px_rgba(59,130,246,0.2)] hover:border-l-2 hover:border-l-blue-500 transition-all">
+              <span className="font-mono text-[11px] uppercase tracking-widest text-blue-400">
                 // SPEC.FOCUS
               </span>
               <p className="mt-1 text-base font-bold text-zinc-100 font-sans">Full Stack & UI Dev</p>
-              <p className="text-xs font-mono text-blue-400 mt-1">React.js · Spring Boot</p>
+              <p className="text-xs font-mono text-red-400 mt-1">React.js · Spring Boot</p>
             </div>
-            <div className="p-4 rounded-none bg-zinc-900/40 backdrop-blur-md border border-red-500/25 shadow-[0_0_15px_rgba(239,68,68,0.08)] hover:border-red-500/50 hover:shadow-[0_0_20px_rgba(239,68,68,0.2)] hover:border-l-2 hover:border-l-red-500 transition-all">
-              <span className="font-mono text-[11px] uppercase tracking-widest text-red-400">
+            <div className="p-4 rounded-none bg-[#11141c]/45 backdrop-blur-md border border-blue-500/25 shadow-[0_0_15px_rgba(59,130,246,0.08)] hover:border-blue-500/50 hover:shadow-[0_0_20px_rgba(59,130,246,0.2)] hover:border-l-2 hover:border-l-blue-500 transition-all">
+              <span className="font-mono text-[11px] uppercase tracking-widest text-blue-400">
                 // ACADEMIC.CRED
               </span>
               <p className="mt-1 text-base font-bold text-zinc-100 font-sans">{education.institution}</p>
-              <p className="text-xs font-mono text-blue-400 mt-1">{education.degree} ({education.cgpa})</p>
+              <p className="text-xs font-mono text-red-400 mt-1">{education.degree} ({education.cgpa})</p>
             </div>
-            <div className="p-4 rounded-none bg-zinc-900/40 backdrop-blur-md border border-red-500/25 shadow-[0_0_15px_rgba(239,68,68,0.08)] hover:border-red-500/50 hover:shadow-[0_0_20px_rgba(239,68,68,0.2)] hover:border-l-2 hover:border-l-red-500 transition-all">
-              <span className="font-mono text-[11px] uppercase tracking-widest text-red-400">
+            <div className="p-4 rounded-none bg-[#11141c]/45 backdrop-blur-md border border-blue-500/25 shadow-[0_0_15px_rgba(59,130,246,0.08)] hover:border-blue-500/50 hover:shadow-[0_0_20px_rgba(59,130,246,0.2)] hover:border-l-2 hover:border-l-blue-500 transition-all">
+              <span className="font-mono text-[11px] uppercase tracking-widest text-blue-400">
                 // GEO.LOC
               </span>
               <p className="mt-1 text-base font-bold text-zinc-100 font-sans">{contact.location}</p>
-              <p className="text-xs font-mono text-blue-400 mt-1">Relocation / Remote: Ready</p>
+              <p className="text-xs font-mono text-red-400 mt-1">Relocation / Remote: Ready</p>
             </div>
           </div>
         </div>
