@@ -7,7 +7,7 @@ export const personalData = {
   contact: {
     email: "mohamedferoz778@gmail.com",
     phone: "+91 9489512450",
-    location: "Kottakuppam, Tamil Nadu",
+    location: "Pondicherry",
     github: "https://github.com/FEROZ130405/",
   },
   summary:
@@ -85,6 +85,18 @@ export const personalData = {
         "Scheduled electronic waste pickup and drop-off locator",
         "Interactive AI chatbot providing instant recycling guidance",
         "End-to-end full stack architecture for disposal tracking",
+      ],
+      githubUrl: "https://github.com/FEROZ130405/",
+    },
+    {
+      title: "Decentralized Identity Verification System",
+      description:
+        "Developed a secure, anonymous identity verification system to reduce data leakage risks. Created a Node.js simulation mimicking blockchain mechanics alongside an actual Ethereum testnet implementation using Hardhat and MetaMask. Features a single-point database storing cryptographic keys for secure credential verification without exposing underlying user data. Built with React.js and Node.js.",
+      tags: ["React.js", "Node.js", "Ethereum", "Hardhat", "MetaMask"],
+      features: [
+        "Secure, anonymous identity verification reducing data leakage risks",
+        "Node.js simulation alongside Ethereum testnet via Hardhat & MetaMask",
+        "Cryptographic key storage for credential verification without exposing raw data",
       ],
       githubUrl: "https://github.com/FEROZ130405/",
     },
